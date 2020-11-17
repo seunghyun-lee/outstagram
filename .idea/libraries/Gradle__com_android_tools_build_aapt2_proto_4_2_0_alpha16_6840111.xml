@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.android.tools.build:aapt2-proto:4.2.0-alpha16-6840111">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/aapt2-proto/4.2.0-alpha16-6840111/de770048bb60285ee0edcb83d296b8a809e2a700/aapt2-proto-4.2.0-alpha16-6840111.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/aapt2-proto/4.2.0-alpha16-6840111/77c8e10f49acf7be05293b2bc13f19a9fae9faff/aapt2-proto-4.2.0-alpha16-6840111-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/aapt2-proto/4.2.0-alpha16-6840111/47180579acd9bb8310db3480795c5bc35fdf954f/aapt2-proto-4.2.0-alpha16-6840111-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

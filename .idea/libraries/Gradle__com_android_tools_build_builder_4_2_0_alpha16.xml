@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.android.tools.build:builder:4.2.0-alpha16">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/4.2.0-alpha16/3a9b4a1bca70c9e970b402dbe27cb0dcf4bf27c4/builder-4.2.0-alpha16.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/4.2.0-alpha16/2a8d904d9455096a0765680a272ec0144b48699e/builder-4.2.0-alpha16-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.build/builder/4.2.0-alpha16/be26b86a148446e951a92d56cbe42bf45ef1006d/builder-4.2.0-alpha16-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

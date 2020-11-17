@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.android.tools.analytics-library:crash:27.2.0-alpha16">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/crash/27.2.0-alpha16/10c7947a9f1f36f903bef5f3e51f7894244625ed/crash-27.2.0-alpha16.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/crash/27.2.0-alpha16/65c93c7c967391c2b230183d1ea36ed2520b205/crash-27.2.0-alpha16-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/crash/27.2.0-alpha16/b315fbc21854936813299fd9d64d2dd03adfe018/crash-27.2.0-alpha16-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
