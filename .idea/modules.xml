@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/instagram.iml" filepath="$PROJECT_DIR$/.idea/modules/instagram.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/instagram.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/instagram.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/outstagram.iml" filepath="$PROJECT_DIR$/.idea/modules/outstagram.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/outstagram.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/outstagram.app.iml" />
     </modules>
   </component>
 </project>
