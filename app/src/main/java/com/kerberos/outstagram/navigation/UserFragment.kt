@@ -19,6 +19,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.kerberos.outstagram.LoginActivity
 import com.kerberos.outstagram.MainActivity
 import com.kerberos.outstagram.R
+import com.kerberos.outstagram.navigation.model.AlarmDTO
 import com.kerberos.outstagram.navigation.model.ContentDTO
 import com.kerberos.outstagram.navigation.model.FollowDTO
 import kotlinx.android.synthetic.main.activity_main.*
@@ -80,6 +81,16 @@ class UserFragment: Fragment() {
         return fragmentView
     }
 
+    fun followAlarm(destinationUid : String) {
+        var alarmDTO = AlarmDTO()
+        alarmDTO.destinationUid = destinationUid
+        alarmDTO.userId = auth?.currentUser?.email
+        alarmDTO.uid = auth?.currentUser?.uid
+        alarmDTO.kind = 2
+        alarmDTO.timestamp = System.currentTimeMillis()
+        FirebaseFirestore.getInstance().collection("alarms").document().set(alarmDTO)
+    }
+
     fun getFollowerAndFollowing() {
         firestore?.collection("users")?.document(uid!!)?.addSnapshotListener { documentSnapshot, firebaseFirestoreException ->
             if (documentSnapshot == null) return@addSnapshotListener
@@ -136,7 +147,7 @@ class UserFragment: Fragment() {
                 followDTO = FollowDTO()
                 followDTO!!.followerCount = 1
                 followDTO!!.followers[currentUserUid!!] = true
-
+                followAlarm(uid!!)
                 transactron.set(tsDocFollower,followDTO!!)
                 return@runTransaction
             }
@@ -147,6 +158,7 @@ class UserFragment: Fragment() {
             } else {
                 followDTO!!.followerCount = followDTO!!.followerCount + 1
                 followDTO!!.followers[currentUserUid!!] = true
+                followAlarm(uid!!)
             }
             transactron.set(tsDocFollower,followDTO!!)
             return@runTransaction
