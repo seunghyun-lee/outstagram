@@ -16,6 +16,7 @@ import com.google.firebase.firestore.ListenerRegistration
 import com.kerberos.outstagram.R
 import com.kerberos.outstagram.navigation.model.AlarmDTO
 import com.kerberos.outstagram.navigation.model.ContentDTO
+import com.kerberos.outstagram.navigation.util.FcmPush
 import kotlinx.android.synthetic.main.activity_comment.*
 import kotlinx.android.synthetic.main.item_comment.view.*
 
@@ -58,6 +59,9 @@ class CommentActivity : AppCompatActivity() {
         alarmDTO.timestamp = System.currentTimeMillis()
         alarmDTO.message = message
         FirebaseFirestore.getInstance().collection("alarms").document().set(alarmDTO)
+
+        var message = FirebaseAuth.getInstance().currentUser?.email +  getString(R.string.alarm_comment)
+        FcmPush.instance.sendMessage(destinationUid, "outstagram", message)
     }
 
     inner class CommentRecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {

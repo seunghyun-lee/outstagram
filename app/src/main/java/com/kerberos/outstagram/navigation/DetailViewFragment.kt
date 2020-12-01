@@ -18,6 +18,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.kerberos.outstagram.R
 import com.kerberos.outstagram.navigation.model.AlarmDTO
 import com.kerberos.outstagram.navigation.model.ContentDTO
+import com.kerberos.outstagram.navigation.util.FcmPush
 import kotlinx.android.synthetic.main.fragment_detail.view.*
 import kotlinx.android.synthetic.main.item_detail.view.*
 
@@ -58,6 +59,7 @@ class DetailViewFragment : Fragment() {
                         contentDTOs.add(item!!)
                         contentUidList.add(snapshot.id)
                     }
+                    contentDTOs.sortByDescending { it.timestamp }
                     notifyDataSetChanged()
                 }
         }
@@ -164,9 +166,10 @@ class DetailViewFragment : Fragment() {
             alarmDTO.uid = user?.uid
             alarmDTO.kind = 0
             alarmDTO.timestamp = System.currentTimeMillis()
-
             firestore?.collection("alarms")!!.document().set(alarmDTO)
+
             var message = user?.email + getString(R.string.alarm_favorite)
+            FcmPush.instance.sendMessage(destinationUid, "outstagram", message)
         }
     }
 }
